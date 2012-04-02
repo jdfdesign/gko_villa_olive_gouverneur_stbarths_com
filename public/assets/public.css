@@ -6881,13 +6881,13 @@ table.hide-on-tablets {
 }
 @media (min-width: 981px) {
   /* line 143, ../../../../.rvm/gems/ruby-1.8.7-p358@global/bundler/gems/gko_cms3-9a8a816aea55/gko_core/app/assets/stylesheets/gko/_mixins.scss */
-  .navbar .header-nav nav .nav {
+  .navbar .header-nav .nav .nav {
     position: relative;
     left: 50%;
     float: left;
   }
   /* line 148, ../../../../.rvm/gems/ruby-1.8.7-p358@global/bundler/gems/gko_cms3-9a8a816aea55/gko_core/app/assets/stylesheets/gko/_mixins.scss */
-  .navbar .header-nav nav .nav > li {
+  .navbar .header-nav .nav .nav > li {
     float: left;
     position: relative;
     right: 50%;
@@ -6895,6 +6895,14 @@ table.hide-on-tablets {
   }
 
   /* line 154, ../../app/assets/stylesheets/public.css.scss */
+  .navbar .brand {
+    float: none;
+    clear: both;
+    display: block;
+    text-align: center;
+  }
+
+  /* line 160, ../../app/assets/stylesheets/public.css.scss */
   .header-nav {
     border-bottom: 1px solid #B7B6B6;
     padding: 36px 0;
@@ -6910,31 +6918,31 @@ table.hide-on-tablets {
   .header-nav:after {
     clear: both;
   }
-  /* line 160, ../../app/assets/stylesheets/public.css.scss */
+  /* line 166, ../../app/assets/stylesheets/public.css.scss */
   .header-nav .nav > li .text {
     padding-left: 16px;
   }
-  /* line 163, ../../app/assets/stylesheets/public.css.scss */
+  /* line 169, ../../app/assets/stylesheets/public.css.scss */
   .header-nav .nav > li .icon {
     display: inline-block;
     width: 21px;
     height: 4px;
     background: transparent url(/assets/nav-dot.png) 0 0 no-repeat;
   }
-  /* line 169, ../../app/assets/stylesheets/public.css.scss */
+  /* line 175, ../../app/assets/stylesheets/public.css.scss */
   .header-nav .nav > li:first-child {
     background: none;
     padding-left: 0;
   }
-  /* line 172, ../../app/assets/stylesheets/public.css.scss */
+  /* line 178, ../../app/assets/stylesheets/public.css.scss */
   .header-nav .nav > li:first-child .text {
     padding-left: 0;
   }
-  /* line 175, ../../app/assets/stylesheets/public.css.scss */
+  /* line 181, ../../app/assets/stylesheets/public.css.scss */
   .header-nav .nav > li:first-child .icon {
     display: none;
   }
-  /* line 180, ../../app/assets/stylesheets/public.css.scss */
+  /* line 186, ../../app/assets/stylesheets/public.css.scss */
   .header-nav nav {
     float: right;
   }

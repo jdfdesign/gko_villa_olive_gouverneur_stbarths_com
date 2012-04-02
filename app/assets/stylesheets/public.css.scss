@@ -147,8 +147,14 @@ body {
 ----------------------------------------- */
 @import "gko/responsive";
 @media (min-width: 981px) {
-	.navbar .header-nav nav {
+	.navbar .header-nav .nav {
 		@include center-nav;  
+	}
+	.navbar .brand {
+		float: none;
+		clear: both;
+		display: block;
+		text-align: center;
 	}
 	.header-nav {
 		border-bottom: 1px solid #B7B6B6; 
