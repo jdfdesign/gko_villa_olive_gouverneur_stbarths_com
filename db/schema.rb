@@ -19,29 +19,29 @@ ActiveRecord::Schema.define(:version => 20120402211635) do
     t.string   "type",       :limit => 40
     t.datetime "deleted_at"
     t.datetime "expires_at"
-    t.datetime "created_at",               :null => false
-    t.datetime "updated_at",               :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "configurations", :force => true do |t|
     t.integer  "site_id"
     t.string   "name"
     t.string   "type",       :limit => 50
-    t.datetime "created_at",               :null => false
-    t.datetime "updated_at",               :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "content_translations", :force => true do |t|
     t.integer  "content_id"
     t.string   "locale"
-    t.text     "meta_keywords"
-    t.text     "body"
-    t.string   "slug"
-    t.string   "title"
     t.string   "meta_title"
     t.text     "meta_description"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.string   "title"
+    t.text     "meta_keywords"
+    t.string   "slug"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "content_translations", ["content_id"], :name => "index_content_translations_on_content_id"
@@ -63,8 +63,8 @@ ActiveRecord::Schema.define(:version => 20120402211635) do
     t.text     "meta_keywords"
     t.text     "options"
     t.string   "author_name",      :limit => 120
-    t.datetime "created_at",                                     :null => false
-    t.datetime "updated_at",                                     :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "globalized",                      :default => 0
     t.integer  "position",                        :default => 1
   end
@@ -80,8 +80,8 @@ ActiveRecord::Schema.define(:version => 20120402211635) do
     t.string   "iso",        :limit => 2
     t.string   "name"
     t.integer  "numcode"
-    t.datetime "created_at",              :null => false
-    t.datetime "updated_at",              :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "delayed_jobs", :force => true do |t|
@@ -104,8 +104,8 @@ ActiveRecord::Schema.define(:version => 20120402211635) do
     t.integer  "document_id",                                  :null => false
     t.integer  "attachable_id",                                :null => false
     t.string   "attachable_type", :limit => 40,                :null => false
-    t.datetime "created_at",                                   :null => false
-    t.datetime "updated_at",                                   :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "document_assignments", ["attachable_id", "attachable_type"], :name => "index_document_assignments_on_attachable_id_and_attachable_type"
@@ -129,8 +129,8 @@ ActiveRecord::Schema.define(:version => 20120402211635) do
     t.integer  "image_height"
     t.string   "image_uid"
     t.string   "image_ext"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "country_id"
   end
 
@@ -143,8 +143,8 @@ ActiveRecord::Schema.define(:version => 20120402211635) do
     t.string   "locale"
     t.string   "title"
     t.string   "alt"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "document_translations", ["document_id"], :name => "index_document_translations_on_document_id"
@@ -157,8 +157,8 @@ ActiveRecord::Schema.define(:version => 20120402211635) do
     t.integer  "account_id"
     t.integer  "site_id"
     t.integer  "document_assignments_count",                :default => 0
-    t.datetime "created_at",                                               :null => false
-    t.datetime "updated_at",                                               :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "document_mime_type"
     t.string   "document_name"
     t.integer  "document_size"
@@ -177,8 +177,8 @@ ActiveRecord::Schema.define(:version => 20120402211635) do
     t.integer  "image_id",                                     :null => false
     t.integer  "attachable_id",                                :null => false
     t.string   "attachable_type", :limit => 40,                :null => false
-    t.datetime "created_at",                                   :null => false
-    t.datetime "updated_at",                                   :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "image_assignments", ["attachable_id", "attachable_type"], :name => "index_image_assignments_on_attachable_id_and_attachable_type"
@@ -191,8 +191,8 @@ ActiveRecord::Schema.define(:version => 20120402211635) do
     t.integer  "lft"
     t.integer  "rgt"
     t.integer  "level"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "image_folders", ["parent_id"], :name => "index_image_folders_on_parent_id"
@@ -201,8 +201,8 @@ ActiveRecord::Schema.define(:version => 20120402211635) do
   create_table "image_stickers", :force => true do |t|
     t.string   "name"
     t.integer  "site_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "image_stickers", ["name"], :name => "index_image_stickers_on_name"
@@ -212,8 +212,8 @@ ActiveRecord::Schema.define(:version => 20120402211635) do
     t.integer  "sticker_id"
     t.integer  "image_id"
     t.integer  "image_stickings_count", :default => 0
-    t.datetime "created_at",                           :null => false
-    t.datetime "updated_at",                           :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "image_stickings", ["sticker_id", "image_id"], :name => "index_image_stickings_on_sticker_id_and_image_id"
@@ -223,8 +223,8 @@ ActiveRecord::Schema.define(:version => 20120402211635) do
     t.string   "locale"
     t.string   "title"
     t.string   "alt"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "image_translations", ["image_id"], :name => "index_image_translations_on_image_id"
@@ -237,8 +237,8 @@ ActiveRecord::Schema.define(:version => 20120402211635) do
     t.integer  "author_id"
     t.integer  "site_id"
     t.integer  "image_assignments_count",                :default => 0
-    t.datetime "created_at",                                            :null => false
-    t.datetime "updated_at",                                            :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "image_mime_type"
     t.string   "image_name"
     t.integer  "image_size"
@@ -290,8 +290,8 @@ ActiveRecord::Schema.define(:version => 20120402211635) do
     t.integer  "site_id"
     t.string   "environment"
     t.boolean  "active",      :default => true
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "mail_methods", ["site_id"], :name => "index_mail_methods_on_site_id"
@@ -300,8 +300,8 @@ ActiveRecord::Schema.define(:version => 20120402211635) do
     t.integer  "partner_id"
     t.string   "locale"
     t.text     "body"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "partner_translations", ["locale"], :name => "index_partner_translations_on_locale"
@@ -320,8 +320,8 @@ ActiveRecord::Schema.define(:version => 20120402211635) do
     t.integer  "image_height"
     t.string   "image_uid"
     t.string   "image_ext"
-    t.datetime "created_at",                     :null => false
-    t.datetime "updated_at",                     :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "globalized",      :default => 0
     t.integer  "position",        :default => 1
   end
@@ -334,8 +334,8 @@ ActiveRecord::Schema.define(:version => 20120402211635) do
     t.string   "key",                      :null => false
     t.string   "value_type", :limit => 50
     t.string   "value"
-    t.datetime "created_at",               :null => false
-    t.datetime "updated_at",               :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "preferences", ["key"], :name => "index_preferences_on_key", :unique => true
@@ -356,17 +356,17 @@ ActiveRecord::Schema.define(:version => 20120402211635) do
     t.integer  "section_id"
     t.string   "locale"
     t.string   "path"
-    t.text     "meta_keywords"
-    t.text     "body"
-    t.string   "title_addon"
-    t.string   "slug"
-    t.string   "title"
-    t.string   "menu_title"
     t.string   "meta_title"
-    t.string   "redirect_url"
     t.text     "meta_description"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.string   "title"
+    t.text     "meta_keywords"
+    t.string   "slug"
+    t.string   "title_addon"
+    t.text     "body"
+    t.string   "redirect_url"
+    t.string   "menu_title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "section_translations", ["locale"], :name => "index_section_translations_on_locale"
@@ -394,8 +394,8 @@ ActiveRecord::Schema.define(:version => 20120402211635) do
     t.string   "title_addon"
     t.datetime "published_at"
     t.boolean  "hidden",            :default => false
-    t.datetime "created_at",                           :null => false
-    t.datetime "updated_at",                           :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "menu_title"
     t.integer  "globalized",        :default => 0
     t.integer  "level"
@@ -415,8 +415,8 @@ ActiveRecord::Schema.define(:version => 20120402211635) do
     t.boolean  "restricted",              :default => false
     t.string   "callback_proc_as_string"
     t.string   "form_value_type",         :default => "text_area", :null => false
-    t.datetime "created_at",                                       :null => false
-    t.datetime "updated_at",                                       :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "settings", ["name"], :name => "index_settings_on_name"
@@ -432,11 +432,11 @@ ActiveRecord::Schema.define(:version => 20120402211635) do
   create_table "site_translations", :force => true do |t|
     t.integer  "site_id"
     t.string   "locale"
-    t.string   "subtitle"
-    t.string   "title"
     t.string   "meta_title"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "title"
+    t.string   "subtitle"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "site_translations", ["locale"], :name => "index_site_translations_on_locale"
@@ -452,8 +452,8 @@ ActiveRecord::Schema.define(:version => 20120402211635) do
     t.string   "locales",                  :limit => 17
     t.boolean  "public",                                 :default => true
     t.text     "options"
-    t.datetime "created_at",                                               :null => false
-    t.datetime "updated_at",                                               :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "globalized",                             :default => 0
     t.text     "plugins"
     t.integer  "site_registrations_count",               :default => 0
@@ -530,8 +530,8 @@ ActiveRecord::Schema.define(:version => 20120402211635) do
     t.string   "preferred_language",       :limit => 5
     t.string   "timezone"
     t.integer  "site_registrations_count",                :default => 0
-    t.datetime "created_at",                                              :null => false
-    t.datetime "updated_at",                                              :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "password_salt"
     t.string   "persistence_token"
     t.string   "perishable_token"

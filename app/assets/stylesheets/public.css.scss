@@ -132,7 +132,7 @@ body {
 
 .header-nav {
 	border-bottom: 1px solid #B7B6B6; 
-	padding: $baseLineHeight * 1.5 0;
+	padding-top: $baseLineHeight * 1.5;
 }
 .navbar .dropdown-menu a,
 .header-nav .nav > li > a {
@@ -147,43 +147,70 @@ body {
 ----------------------------------------- */
 @import "gko/responsive";
 @media (min-width: 981px) {
-	.navbar .header-nav .nav {
-		@include center-nav;  
+	/*-----------------------------------------
+	 HEADER
+	----------------------------------------- */ 
+	.navbar-inner {
+	  background-image: none;
+	  background: none; 
 	}
 	.navbar .brand {
-		float: none;
-		clear: both;
-		display: block;
-		text-align: center;
+		width: 100%;
+		a {
+			@include center-block;
+			text-align: center;
+		}
+		
 	}
-	.header-nav {
-		border-bottom: 1px solid #B7B6B6; 
-		padding: $baseLineHeight * 1.5 0;
-
-		@include clearfix;
-		.nav > li { 
+	.navbar .header-nav nav {
+		@include center-nav;  
+	}
+	.navbar .header-nav .nav > li { 
+		.text {
+			padding-left: 16px;
+		}
+		.icon {
+			display: inline-block;
+			width:20px;
+			height: 4px;
+			background: transparent asset-url("nav-dot.png", image) 0 0 no-repeat;
+		} 
+		&:first-child { 
+			background: none;
+			padding-left: 0;
 			.text {
-				padding-left: 16px;
+				padding-left: 0; 
 			}
 			.icon {
-				display: inline-block;
-				width:21px;
-				height: 4px;
-				background: transparent asset-url("nav-dot.png", image) 0 0 no-repeat;
+				display: none;
 			} 
-			&:first-child { 
-				background: none;
-				padding-left: 0;
-				.text {
-					padding-left: 0; 
-				}
-				.icon {
-					display: none;
-				} 
-			}
-		}	
+		}
+	}
+	.navbar .header-nav .nav > li > a { 
+		padding: 10px 0px 11px 10px;
+	}
+	.navbar .nav-collapse {
+		margin-top:10px;
+		@include clearfix;
+		padding-top:10px;
+	}
+	
+	/*-----------------------------------------
+	 FOOTER
+	----------------------------------------- */
+	#footer {
+		border-top: 1px solid #B7B6B6; 
+		padding-bottom: $baseLineHeight * .5;
+		padding-top: $baseLineHeight * .5;
 		nav {
-			float: right;
+			@include clearfix;
+			@include center-nav;
+		}
+		.nav > li > a  {
+			font-weight: normal;
+			font-size: 9px;
+			letter-spacing: 1px; 
+			text-transform: uppercase;
 		}
 	}
 }
