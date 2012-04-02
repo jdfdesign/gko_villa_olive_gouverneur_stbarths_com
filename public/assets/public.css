@@ -6673,7 +6673,7 @@ body {
 /* line 134, ../../app/assets/stylesheets/public.css.scss */
 .header-nav {
   border-bottom: 1px solid #B7B6B6;
-  padding: 36px 0;
+  padding-top: 36px;
 }
 
 /* line 139, ../../app/assets/stylesheets/public.css.scss */
@@ -6880,70 +6880,129 @@ table.hide-on-tablets {
   }
 }
 @media (min-width: 981px) {
+  /*-----------------------------------------
+   HEADER
+  ----------------------------------------- */
+  /* line 154, ../../app/assets/stylesheets/public.css.scss */
+  .navbar-inner {
+    background-image: none;
+    background: none;
+  }
+
+  /* line 158, ../../app/assets/stylesheets/public.css.scss */
+  .navbar .brand {
+    width: 100%;
+  }
+  /* line 160, ../../app/assets/stylesheets/public.css.scss */
+  .navbar .brand a {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
   /* line 143, ../../../../.rvm/gems/ruby-1.8.7-p358@global/bundler/gems/gko_cms3-9a8a816aea55/gko_core/app/assets/stylesheets/gko/_mixins.scss */
-  .navbar .header-nav .nav .nav {
+  .navbar .header-nav nav .nav {
     position: relative;
     left: 50%;
     float: left;
   }
   /* line 148, ../../../../.rvm/gems/ruby-1.8.7-p358@global/bundler/gems/gko_cms3-9a8a816aea55/gko_core/app/assets/stylesheets/gko/_mixins.scss */
-  .navbar .header-nav .nav .nav > li {
+  .navbar .header-nav nav .nav > li {
     float: left;
     position: relative;
     right: 50%;
     display: block;
   }
 
-  /* line 154, ../../app/assets/stylesheets/public.css.scss */
-  .navbar .brand {
-    float: none;
-    clear: both;
-    display: block;
-    text-align: center;
+  /* line 170, ../../app/assets/stylesheets/public.css.scss */
+  .navbar .header-nav .nav > li .text {
+    padding-left: 16px;
+  }
+  /* line 173, ../../app/assets/stylesheets/public.css.scss */
+  .navbar .header-nav .nav > li .icon {
+    display: inline-block;
+    width: 20px;
+    height: 4px;
+    background: transparent url(/assets/nav-dot.png) 0 0 no-repeat;
+  }
+  /* line 179, ../../app/assets/stylesheets/public.css.scss */
+  .navbar .header-nav .nav > li:first-child {
+    background: none;
+    padding-left: 0;
+  }
+  /* line 182, ../../app/assets/stylesheets/public.css.scss */
+  .navbar .header-nav .nav > li:first-child .text {
+    padding-left: 0;
+  }
+  /* line 185, ../../app/assets/stylesheets/public.css.scss */
+  .navbar .header-nav .nav > li:first-child .icon {
+    display: none;
   }
 
-  /* line 160, ../../app/assets/stylesheets/public.css.scss */
-  .header-nav {
-    border-bottom: 1px solid #B7B6B6;
-    padding: 36px 0;
+  /* line 190, ../../app/assets/stylesheets/public.css.scss */
+  .navbar .header-nav .nav > li > a {
+    padding: 10px 0px 11px 10px;
+  }
+
+  /* line 193, ../../app/assets/stylesheets/public.css.scss */
+  .navbar .nav-collapse {
+    margin-top: 10px;
     zoom: 1;
+    padding-top: 10px;
   }
   /* line 159, ../../../../.rvm/gems/ruby-1.8.7-p358@global/bundler/gems/gko_cms3-9a8a816aea55/gko_core/app/assets/stylesheets/gko/_mixins.scss */
-  .header-nav:before, .header-nav:after {
+  .navbar .nav-collapse:before, .navbar .nav-collapse:after {
     display: table;
     content: "";
     zoom: 1;
   }
   /* line 164, ../../../../.rvm/gems/ruby-1.8.7-p358@global/bundler/gems/gko_cms3-9a8a816aea55/gko_core/app/assets/stylesheets/gko/_mixins.scss */
-  .header-nav:after {
+  .navbar .nav-collapse:after {
     clear: both;
   }
-  /* line 166, ../../app/assets/stylesheets/public.css.scss */
-  .header-nav .nav > li .text {
-    padding-left: 16px;
+
+  /*-----------------------------------------
+   FOOTER
+  ----------------------------------------- */
+  /* line 202, ../../app/assets/stylesheets/public.css.scss */
+  #footer {
+    border-top: 1px solid #B7B6B6;
+    padding-bottom: 12px;
+    padding-top: 12px;
   }
-  /* line 169, ../../app/assets/stylesheets/public.css.scss */
-  .header-nav .nav > li .icon {
-    display: inline-block;
-    width: 21px;
-    height: 4px;
-    background: transparent url(/assets/nav-dot.png) 0 0 no-repeat;
+  /* line 206, ../../app/assets/stylesheets/public.css.scss */
+  #footer nav {
+    zoom: 1;
   }
-  /* line 175, ../../app/assets/stylesheets/public.css.scss */
-  .header-nav .nav > li:first-child {
-    background: none;
-    padding-left: 0;
+  /* line 159, ../../../../.rvm/gems/ruby-1.8.7-p358@global/bundler/gems/gko_cms3-9a8a816aea55/gko_core/app/assets/stylesheets/gko/_mixins.scss */
+  #footer nav:before, #footer nav:after {
+    display: table;
+    content: "";
+    zoom: 1;
   }
-  /* line 178, ../../app/assets/stylesheets/public.css.scss */
-  .header-nav .nav > li:first-child .text {
-    padding-left: 0;
+  /* line 164, ../../../../.rvm/gems/ruby-1.8.7-p358@global/bundler/gems/gko_cms3-9a8a816aea55/gko_core/app/assets/stylesheets/gko/_mixins.scss */
+  #footer nav:after {
+    clear: both;
   }
-  /* line 181, ../../app/assets/stylesheets/public.css.scss */
-  .header-nav .nav > li:first-child .icon {
-    display: none;
+  /* line 143, ../../../../.rvm/gems/ruby-1.8.7-p358@global/bundler/gems/gko_cms3-9a8a816aea55/gko_core/app/assets/stylesheets/gko/_mixins.scss */
+  #footer nav .nav {
+    position: relative;
+    left: 50%;
+    float: left;
   }
-  /* line 186, ../../app/assets/stylesheets/public.css.scss */
-  .header-nav nav {
-    float: right;
+  /* line 148, ../../../../.rvm/gems/ruby-1.8.7-p358@global/bundler/gems/gko_cms3-9a8a816aea55/gko_core/app/assets/stylesheets/gko/_mixins.scss */
+  #footer nav .nav > li {
+    float: left;
+    position: relative;
+    right: 50%;
+    display: block;
+  }
+  /* line 210, ../../app/assets/stylesheets/public.css.scss */
+  #footer .nav > li > a {
+    font-weight: normal;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
   }
 }
