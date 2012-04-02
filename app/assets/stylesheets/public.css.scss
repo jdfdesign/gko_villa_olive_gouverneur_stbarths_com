@@ -125,9 +125,6 @@ body {
  HEADER
 ----------------------------------------- */
 
-.navbar .brand {
-	@include logo(200px, 80px);	
-}
 .navbar {
 	border-top: 3px solid #B7B6B6;
 }
@@ -150,6 +147,9 @@ body {
 ----------------------------------------- */
 @import "gko/responsive";
 @media (min-width: 981px) {
+	.navbar .header-nav nav {
+		@include center-nav;  
+	}
 	.header-nav {
 		border-bottom: 1px solid #B7B6B6; 
 		padding: $baseLineHeight * 1.5 0;
