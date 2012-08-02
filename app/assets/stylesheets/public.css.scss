@@ -1,214 +1,382 @@
-/* custom variables >>> */ 
-$altColor: #900; //red 
-/* <<< custom variables */ 
-$bodyBackgroundColor: #F5F3ED;
+// Variables.less
+// Variables to customize the look and feel of Bootstrap
+// -----------------------------------------------------
 
-// Typography
-$baseFontFamily: "futura-pt", "Helvetica Neue", Helvetica, Arial, sans-serif; 
-$baseFontSize: 12px;
-$baseLineHeight: 24px;
-$textColor: #4C4C4C;
-$headingTextColor: #191919;
 
-// Navbar
-$navbarButtonBackgroundHighlight: black; 
-$navbarButtonBackground: black; 
-$navbarButtonIconBarColor: white;
+
+// GLOBAL VALUES
+// --------------------------------------------------
+
+// Grays
+// -------------------------
+$black:                 #000;// !default
+$grayDarker:            #222;// !default
+$grayDark:              #333;// !default
+$gray:                  #555;// !default
+$grayLight:             #999;// !default
+$grayLighter:           #F8F8F8;// !default
+$white:                 #fff;// !default
+
+
+// Accent colors
+// -------------------------
+$blue:                  #049cdb;// !default
+$blueDark:              #0064cd;// !default
+$green:                 #46a546;// !default
+$red:                   #9d261d;// !default
+$yellow:                #ffc40d;// !default
+$orange:                #f89406;// !default
+$pink:                  #c3325f;// !default
+$purple:                #7a43b6;// !default
+
+
+// Scaffolding
+// -------------------------
+$bodyBackground:        $grayLighter;// !default
+$textColor:             $grayDark;// !default
+
 
 // Links
-//$linkColor: #ADADAD;
-$linkColorHover: #191919;
+// -------------------------
+$linkColor:             $gray;// !default
+$linkColorHover:        darken($linkColor, 15%);// !default
 
-// Import
-@import "gko_public_all"; 
-@import "gko/elastislide"; 
+
+// Typography
+// -------------------------
+$sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;// !default
+$serifFontFamily:       "ltc-bodoni-175", Georgia, "Times New Roman", Times, serif;// !default
+$monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;// !default
+
+$baseFontSize:          13px;// !default
+$baseFontFamily:        $sansFontFamily;// !default
+$baseLineHeight:        18px;// !default
+$altFontFamily:         $serifFontFamily;// !default
+
+$headingsFontFamily:    inherit;// !default // empty to use BS default, @baseFontFamily
+$headingsFontWeight:    bold;// !default    // instead of browser default, bold
+$headingsColor:         inherit;// !default // empty to use BS default, @textColor
+
+
+// Tables
+// -------------------------
+$tableBackground:                   transparent;// !default // overall background-color
+$tableBackgroundAccent:             #f9f9f9;// !default // for striping
+$tableBackgroundHover:              #f5f5f5;// !default // for hover
+$tableBorder:                       #ddd;// !default // table and cell border
+
+
+// Buttons
+// -------------------------
+$btnBackground:                     $white;// !default
+$btnBackgroundHighlight:            darken($white, 10%);// !default
+$btnBorder:                         #ccc;// !default
+
+$btnPrimaryBackground:              $linkColor;// !default
+$btnPrimaryBackgroundHighlight:     adjust-hue($btnPrimaryBackground, 15%);// !default
+
+$btnInfoBackground:                 #5bc0de;// !default
+$btnInfoBackgroundHighlight:        #2f96b4;// !default
+
+$btnSuccessBackground:              #62c462;// !default
+$btnSuccessBackgroundHighlight:     #51a351;// !default
+
+$btnWarningBackground:              lighten($orange, 15%);// !default
+$btnWarningBackgroundHighlight:     $orange;// !default
+
+$btnDangerBackground:               #ee5f5b;// !default
+$btnDangerBackgroundHighlight:      #bd362f;// !default
+
+$btnInverseBackground:              $gray;// !default
+$btnInverseBackgroundHighlight:     $grayDarker;// !default
+
+
+// Forms
+// -------------------------
+$inputBackground:               $white;// !default
+$inputBorder:                   #ccc;// !default
+$inputBorderRadius:             3px;// !default
+$inputDisabledBackground:       $grayLighter;// !default
+
+$formActionsBackground:         #f5f5f5;// !default
+
+// Dropdowns
+// -------------------------
+$dropdownBackground:            $white;// !default
+$dropdownBorder:                rgba(0,0,0,.2);// !default
+$dropdownLinkColor:             $grayDark;// !default
+$dropdownLinkColorHover:        $white;// !default
+$dropdownLinkBackgroundHover:   $linkColor;// !default
+$dropdownDividerTop:            #e5e5e5;// !default
+$dropdownDividerBottom:         $white;// !default
+
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+// Z-index master list
+// -------------------------
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+$zindexDropdown:        1000;// !default
+$zindexPopover:         1010;// !default
+$zindexTooltip:         1020;// !default
+$zindexFixedNavbar:     1030;// !default
+$zindexModalBackdrop:   1040;// !default
+$zindexModal:           1050;// !default
+
+
+// Sprite icons path
+// -------------------------
+$iconSpritePath:        "twitter/bootstrap/glyphicons-halflings.png";// !default
+$iconWhiteSpritePath:   "twitter/bootstrap/glyphicons-halflings-white.png";// !default
+
+
+// Input placeholder text color
+// -------------------------
+$placeholderText:       $grayLight;// !default
+
+
+// Hr border color
+// -------------------------
+$hrBorder:              $grayLighter;// !default
+
+
+// Navbar
+// -------------------------
+$navbarHeight:                    40px;// !default
+$navbarBackground:                $white;// !default
+$navbarBackgroundHighlight:       $white;// !default
+
+$navbarText:                      $grayLight;// !default
+$navbarLinkColor:                 $grayLight;// !default
+$navbarLinkColorHover:            $grayDarker;// !default
+$navbarLinkColorActive:           $navbarLinkColorHover;// !default
+$navbarLinkBackgroundHover:       transparent;// !default
+$navbarLinkBackgroundActive:      $navbarBackground;// !default
+
+$navbarSearchBackground:          lighten($navbarBackground, 25%);// !default
+$navbarSearchBackgroundFocus:     $white;// !default
+$navbarSearchBorder:              darken($navbarSearchBackground, 30%);// !default
+$navbarSearchPlaceholderColor:    #ccc;// !default
+$navbarBrandColor:                $navbarLinkColor;// !default
+
+
+// Hero unit
+// -------------------------
+$heroUnitBackground:              $grayLighter;// !default
+$heroUnitHeadingColor:            inherit;// !default
+$heroUnitLeadColor:               inherit;// !default
+
+
+// Form states and alerts
+// -------------------------
+$warningText:             #c09853;// !default
+$warningBackground:       #fcf8e3;// !default
+$warningBorder:           darken(adjust_hue($warningBackground, -10deg), 3%);// !default
+
+$errorText:               #b94a48;// !default
+$errorBackground:         #f2dede;// !default
+$errorBorder:             darken(adjust_hue($errorBackground, -10deg), 3%);// !default
+
+$successText:             #468847;// !default
+$successBackground:       #dff0d8;// !default
+$successBorder:           darken(adjust_hue($successBackground, -10deg), 5%);// !default
+
+$infoText:                #3a87ad;// !default
+$infoBackground:          #d9edf7;// !default
+$infoBorder:              darken(adjust_hue($infoBackground, -10deg), 7%);// !default
+
+
+
+// GRID
+// --------------------------------------------------
+
+// Default 940px grid
+// -------------------------
+$gridColumns:             12;// !default
+$gridColumnWidth:         60px;// !default
+$gridGutterWidth:         20px;// !default
+$gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));// !default
+
+// Fluid grid
+// -------------------------
+$fluidGridColumnWidth:    6.382978723%;// !default
+$fluidGridGutterWidth:    2.127659574%;// !default
+
+
+@import "twitter/bootstrap";
+@import "gko/mixin.1.0.0";
+@import "gko/grid";
+@import "galleria";
 
 /*-----------------------------------------
-   SHARED STYLES 
------------------------------------------ */ 
-.uppercase_font_style {
-	line-height: 24px;
-	font-size: 13px;
-	letter-spacing: 1px; 
-	text-transform: uppercase; 
-}
-
-/*-----------------------------------------
- TYPOGRAPHY 
+ STRUCTURAL LAYOUT 
 ----------------------------------------- */
-h1 {
-	font-size: 12px;
-	line-height: 70px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	text-align: center;
-	letter-spacing: 3px;
-}
-h2 {
-	font-size: 12px;
-	font-style: italic;
-	line-height: 70px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	text-align: center;
-	letter-spacing: 3px;
-}
-h3 {
-	font-size: 12px;
-	font-weight: normal;
-	line-height: 24px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	text-align: center;
-	letter-spacing: 3px;
-}
-h4 {
-	font-size: 12px;
-	font-weight: normal;
-	font-style: italic;
-	line-height: 70px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	text-align: center;
-	letter-spacing: 3px;
-}
-/*-----------------------------------------
-   OVERWRITTE
------------------------------------------ */
-.html_text {
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	text-align: center;
-	p, ul {
-		font-weight: 300;
-	}
-	p {
-		margin-bottom: $baseLineHeight;
-	//	@include columns(50%, 2, 50px, #ccc, dotted);
-	}
-}
-/*-----------------------------------------
-   STRUCTURE
------------------------------------------ */ 
+
 body {
+	//text-shadow: 0px 1px 0 white; 
+	//border-top: 6px solid $textColor; 
 	display: none;
-}
-/*-----------------------------------------
-   SLIDESHOW
------------------------------------------ */ 
-.diaporama {
-	background-color: white;
-	padding:18px;
-	border: 1px solid #B7B6B6;
-	margin-bottom: $baseLineHeight;
+} 
+
+.html_text {
+//	font-size: 11px;
+//	line-height: $baseLineHeight;
+//	font-weight: 100;
+	letter-spacing: 1px;
+//	width: 450px;
 }
 /*-----------------------------------------
  HEADER
 ----------------------------------------- */
 
-body {
-	border-top: 3px solid #5d5b59;
+/*-----------------------------------------
+ FOOTER
+----------------------------------------- */
+/*-----------------------------------------
+ CONTENT
+----------------------------------------- */
+.home-content {
+	background: $grayDarker; 
+	.html-text {
+		color: $gray;
+		font-size: 40px;
+		letter-spacing: 4px;
+		line-height: 50px;
+		padding: 100px;
+		text-align: center;
+		font-style: italic;
+		font-family: $serifFontFamily;
+	}
 }
-#locales.nav {
-	background-color: #5d5b59;
-	color: #fff;
-	@include corner-bottom(4px);	
+.page-images {
+	position: relative;
 }
- .navbar .header-top #locales.nav > li > a {
-	color: #fff;
-	&:hover {
-		color: #fff;	
-	};
+.page-description {
+	text-align: center;
+	background-color: white;
+	padding: 80px 21px;
+	.page-title {
+		letter-spacing: 4px;
+		text-align: center;
+		text-transform: capitalize;
+		font-style: italic;
+		line-height: 90px;
+		font-weight: 300;
+		font-size: 64px;
+		font-family: $serifFontFamily;
+	}
+	.html-text {
+		font-size: 9px;
+		line-height: 24px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		padding: 10px 100px 40px;
+		text-align: center;
+		color: #4C4C4C;
+	}
+
 }
-.header-nav {
-	border-bottom: 1px solid #B7B6B6; 
-	padding-top: $baseLineHeight * 1.5;
-}
-.navbar .dropdown-menu a,
-.header-nav .nav > li > a {
+
+h3.slideshow-title {
+	font-size: 12px;
+	line-height: 240px;
 	text-transform: uppercase;
-	font-size: 11px;
-	font-weight: normal;
 	letter-spacing: 2px;
-	line-height: 28px;
+	text-align: center;
+	letter-spacing: 3px;
+	color: #191919;
+	position: absolute;
+	z-index: 4;
+	top: 50%;
+	left: 50%;
+	width: 240px;
+	height: 240px;
+	margin-left: -120px;
+	margin-top: -120px;
+	background-color: white;
+	opacity: 1;
+	background-color: rgba(255,255,255,.7);
+	@include transition(all 0.7s ease-in-out);
+	&:hover {
+		background-color: rgba(255,255,255,0);
+		@include opacity(0);
+	}
+};	
+li.active .slideshow-info{
+	display: none;
 }
+
 /*-----------------------------------------
  RESPONSIVE
 ----------------------------------------- */
-@import "gko/responsive";
+@import "twitter/bootstrap/responsive";
+
 @media (min-width: 980px) {
-	/*-----------------------------------------
-	 HEADER
-	----------------------------------------- */ 
+	#main-wrapper {
+		max-width: 1170px;
+		float: left;
+	}
+	#main-container {
+		padding-left: 220px;
+	}
+	
+	/*-- HEADER
+	----------------------------------------- */
+	.navbar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		background-color: #F8F8F8;
+		z-index: 10;
+		min-width: 220px;
+		width: 220px;
+	}
+	.navbar .brand {
+		float: none;
+		clear: both;
+		@include center-block();
+		margin-top: 120px;
+		letter-spacing: 4px;
+		text-align: center;
+		text-transform: uppercase;
+		line-height: 42px;
+		font-weight: 300;
+		font-size: 32px;
+	}
 	.navbar-inner {
 	  background-image: none;
 	  background: none; 
 	}
-	.navbar .brand {
-		width: 100%;
-		a {
-			@include center-block;
-			text-align: center;
-		}
-		
-	}
-	.navbar .header-nav nav {
-		@include center-nav;  
-	}
-	.navbar .header-nav .nav > li { 
-		.text {
-			padding-left: 16px;
-		}
-		.icon {
-			display: inline-block;
-			width:20px;
-			height: 4px;
-			background: transparent asset-url("nav-dot.png", image) 0 0 no-repeat;
-		} 
-		&:first-child { 
-			background: none;
-			padding-left: 0;
-			.text {
-				padding-left: 0; 
-			}
-			.icon {
-				display: none;
-			} 
-		}
-	}
-	.navbar .header-nav .nav > li .dropdown-menu > a {
-		.text {
-			padding-left: 0; 
-		}
-		.icon {
-			display: none;
-		}
-	}
-	.navbar .header-nav .nav > li > a { 
-		padding: 10px 0px 11px 10px;
-	}
-	.navbar .nav-collapse {
-		margin-top:10px;
-		@include clearfix;
-		padding-top:10px;
+	
+	.navbar ul.nav > li > a {
+		text-transform: uppercase;
+		text-align: center;
+		font-size: $baseFontSize - 3;
+		letter-spacing: 2px;
+		text-shadow: none;
+		padding: 3px 15px;
 	}
 	
-	/*-----------------------------------------
-	 FOOTER
-	----------------------------------------- */
-	#footer {
-		border-top: 1px solid #B7B6B6; 
-		padding-bottom: $baseLineHeight * .5;
-		padding-top: $baseLineHeight * .5;
-		nav {
-			@include clearfix;
-			@include center-nav;
-		}
-		.nav > li > a  {
-			font-weight: normal;
-			font-size: 9px;
-			letter-spacing: 1px; 
-			text-transform: uppercase;
-		}
+	#locales-menu {
+		float: none;
+		text-align: center;
 	}
+	#locales-menu ul.nav {
+		@include center-nav();
+	}
+	#primary-menu ul.nav {
+		@include center-block();
+		left: auto;
+		float: none;
+	}
+	#primary-menu ul.nav > li {
+		float: none;
+	}
+
+	
+	
 }

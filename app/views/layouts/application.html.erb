@@ -1,0 +1,54 @@
+<% 
+	@home = site.sections.named("main").first
+	@pages = @home.children.availables
+%>
+<!doctype html>
+<%= render '/shared/html_tag' %>
+<head>
+  <meta charset="utf-8"/>
+  <title><%= @meta_title || site.title %></title>
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="<%= @meta_description %>"/>
+  <meta name="keywords" content="<%= @meta_keywords %>"/>
+  <%= render 'shared/head' %>
+  <%= yield :head %>
+</head>
+
+
+<body id='<%= @body_id %>' class='mobile'>
+<!--[if lt IE 7]><p class=chromeframe>Your brow-fluidser is <em>ancient!</em> <a href="http://brow-fluidsehappy.com/">Upgrade to a different brow-fluidser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+<div id="main-wrapper">
+	<div class="navbar">
+		<%= render 'shared/locales_select' %>
+		<%= render 'shared/site_title' %>
+		<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+		<a class="btn btn-navbar" data-toggle="collapse" data-target="#primary-menu">
+			<span><%= t(:navigation_menu) %><i class="icon-chevron-down icon-white"></i></span>
+        </a>
+			<nav id="primary-menu" class="primary-menu-container nav-collapse collapse">
+				<%= render 'shared/menu', :sections => site.sections.named("main").first.children.in_menu %>
+			</nav>
+	</div>
+	<ul id="main-container" class='container-fluid unstyled'>
+		<li class="row-fluid home-content"> 
+			<div class="span12 page-content">
+				<%= render_html_text(@home.body) %>
+			</div>
+		</li>
+		<%= render @pages %>
+		<li class="row-fluid"> 
+			<div class="span6"> 
+				<h2>Question?</h2>
+					<%= render "inquiries/form" %>
+			</div>
+			<div class="span6">
+				<h2>Contact</h2>
+			</div>
+		</li>
+	</ul>
+</div>
+	<%= render 'shared/javascripts' %>
+	<%= yield :after_javascript_libraries %>
+</body>
+</html>

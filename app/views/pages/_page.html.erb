@@ -1,0 +1,15 @@
+<%= content_tag_for(:li, page, :class => "row-fluid") do %>
+	<div class="span12 page-content"> 
+		<% if page.images.any? %>
+		<div class='page-images'>
+			<%= render 'images/slideshow', :images => page.images %>
+			<h3 class='slideshow-title'><%= page.title %></h3>
+		</div>
+		<% end %>
+		<div class='page-description'>
+			<h1 class='page-title'><%= page.title %></h1>
+			<%= render_html_text(page.body) %>
+		</div>
+	</div>
+<% end %>
+
