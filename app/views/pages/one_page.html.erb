@@ -1,0 +1,34 @@
+<ul class="unstyled">
+	<%= content_tag_for(:li, resource, :class => "row-fluid") do %>
+	<article class="span12 article-inverse">
+		<%= render_slideshow_for(resource) %>
+		<div class='article-content'>
+			<%= render_page_title(resource.title) %>
+			<hr>
+			<%= render_html_text(resource.body) %>
+		</div>
+	</article>
+	<% end %>
+<%
+	sections = begin
+		if resource.children.try(:any?)
+			resource.children
+		else
+			resource.self_and_siblings
+		end
+	end
+%>
+<% sections.each do |page| %>
+	<%= content_tag_for(:li, page, :class => "row-fluid") do -%>
+		<article class="span12 page-content"> 
+		<%= render_slideshow_for(page) %>
+		<div class='article-content'>
+			<b class='snap'></b>
+			<%= render_page_title(page.title) %>
+			<hr>
+			<%= render_html_text(page.body) %>
+		</div>
+		</article>
+	<%- end -%>
+<% end if sections.try(:any?) %>
+</ul>

@@ -7,13 +7,15 @@ group :assets do
  gem 'coffee-rails', '~> 3.2.2'
  gem 'uglifier', '>= 1.0.3'
 end
+prod_location = 'git@github.com:jdfdesign/gko_cms3.git'
+prod_version = "= 0.4.31"
 group :production do
-	gem "gko_core", "= 0.3.44", :git => 'git@github.com:jdfdesign/gko_cms3.git'
-	gem "gko_auth", "= 0.3.44", :git => 'git@github.com:jdfdesign/gko_cms3.git'
-	gem "gko_images", "= 0.3.44", :git => 'git@github.com:jdfdesign/gko_cms3.git'
-	gem "gko_documents", "= 0.3.44", :git => 'git@github.com:jdfdesign/gko_cms3.git'
-	gem "gko_inquiries", "= 0.3.44", :git => 'git@github.com:jdfdesign/gko_cms3.git'
-	gem "gko_themes", "= 0.3.44", :git => 'git@github.com:jdfdesign/gko_cms3.git'
+	gem "gko_core", prod_version, :git => prod_location
+	gem "gko_auth", prod_version, :git => prod_location
+	gem "gko_images", prod_version, :git => prod_location
+	gem "gko_documents", prod_version, :git => prod_location
+	gem "gko_inquiries", prod_version, :git => prod_location
+	gem "gko_themes", prod_version, :git => prod_location
 end
 #group :development do
 #	gem "gko_core", :path => File.expand_path('~/Github/gko_cms3/gko_core', __FILE__)
