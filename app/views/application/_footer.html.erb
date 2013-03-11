@@ -1,3 +1,4 @@
+<% cache([site, I18n.locale, 'footer']) do %> 
 <!-- Footer
 ================================================== -->
  <footer id='footer-container' class='container-fluid hide-on-print'>
@@ -8,6 +9,5 @@
      </div>
    </div>
   <%= render 'copyright' %>
- </footer>
-
-
+ </footer> 
+<% end %>

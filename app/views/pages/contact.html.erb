@@ -1,5 +1,6 @@
+<% resource_cache(resource) do %>
 <article>
-<%= render_slideshow_for(resource) %>
+<%= render_slideshow_for(resource, :plugin => 'slideshow') %>
 <%= render_page_title(resource.title) %>
 <%= render_html_text(resource.body) %>
 <%
@@ -26,3 +27,4 @@
 	
 <% end %>
 </article>
+<% end %>

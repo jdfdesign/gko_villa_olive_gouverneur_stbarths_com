@@ -1,3 +1,4 @@
+<% cache([site, I18n.locale, 'header']) do %>
 <!-- Header
 ================================================== -->
 <header class="navbar hide-on-print">
@@ -16,7 +17,7 @@
 
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span><%= t(:navigation_menu) %><i class="icon-chevron-down icon-white"></i></span>
+          <span><%= t(:navigation_menu) %><i class="icon-chevron-down"></i></span>
         </a>
         <!-- Everything you want hidden at 940px or less, place within here -->
         <div class="nav-collapse">
@@ -27,8 +28,9 @@
         </div>
       </div>
  	  <div class="footer-nav">
-		<%= render 'socials' %>
+		<%#= render 'socials' %>
 	  </div>
     </div>
   </div>
 </header>
+<% end %>

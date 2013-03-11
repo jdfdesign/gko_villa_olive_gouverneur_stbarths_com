@@ -10,6 +10,11 @@ $maxImageWidth: 950px;
 @import "gko/public/base";
 @import "galleria";
 
+
+.btn:focus,
+a:focus {
+  outline: 0;
+}
 /*-----------------------------------------
  STRUCTURAL LAYOUT 
 ----------------------------------------- */
@@ -68,19 +73,10 @@ label {
 			display: block;
 			margin: $baseLineHeight auto;
 		}
-	/*	a {
-			padding: 0;
-			margin: 0 auto;
-			background: transparent image-url("logo_villa_rose.png") center center no-repeat;
-			background-size: contain;
-			cursor: pointer;
-			text-decoration: none;
-			display: block;
-			width: auto;
-			height: 128px;
-			@include hide-text;
-		}*/
-	}
+		
+	} 
+
+	@include hidden-dropdown();
 	ul.nav {
 		@include center-block();
 		left: auto;
@@ -101,7 +97,7 @@ label {
 		display: none;
 	}
 	.btn-navbar {
-		@include buttonBackground($grayLighter, $grayLighter);
+		@include button-background($grayLighter, $grayLighter);
 		text-transform: uppercase;
 		padding: $baseLineHeight 0;
 		font-size: $baseFontSize + 4;
@@ -229,6 +225,17 @@ article {
 	----------------------------------------- */
 	.navbar {
 		margin-bottom: 0;
+		
+		.btn-navbar {
+			color: $black;
+		}
+		.btn-navbar:hover, 
+		.btn-navbar:active, 
+		.btn-navbar.active, 
+		.btn-navbar.disabled, 
+		.btn-navbar[disabled] {
+			color: $grayDark;
+		}
 	}
 
 	.navbar-inner {
@@ -337,6 +344,7 @@ article {
 			display: block;
 			color: $grayLight;
 		}
+		
 	}
 	#locales-menu {
 		float: none;

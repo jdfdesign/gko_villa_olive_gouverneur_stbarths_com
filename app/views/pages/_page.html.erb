@@ -1,18 +1,20 @@
-<%= content_tag_for(:li, page, :class => "row-fluid") do %>
-	<div class="span12 page-content"> 
-		<% if page.images.any? %>
-		<div class='page-images'>
-			<%= render_slideshow_for(page) %>
-			<h3 class='slideshow-title'><%= page.title %></h3>
+<% resource_cache(page) do %> 
+	<%= content_tag_for(:li, page, :class => "row-fluid") do %>
+		<div class="span12 page-content"> 
+			<% if page.images.any? %>
+			<div class='page-images'>
+				<%= render_slideshow_for(page, :plugin => 'slideshow') %>
+				<h3 class='slideshow-title'><%= page.title %></h3>
+			</div>
+			<% end %>
+			<div class='article-content'>
+				<b class='snap'></b>
+				<%= render_page_title(page.title) %>
+				<hr>
+				<%= render_html_text(page.body) %>
+			</div>
 		</div>
-		<% end %>
-		<div class='article-content'>
-			<b class='snap'></b>
-			<%= render_page_title(page.title) %>
-			<hr>
-			<%= render_html_text(page.body) %>
-		</div>
-	</div>
+	<% end %> 
 <% end %>
 
 
