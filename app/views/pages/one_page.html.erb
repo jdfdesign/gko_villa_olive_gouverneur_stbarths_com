@@ -1,23 +1,8 @@
 <%# resource_cache(resource) do %> 
 <ul class="unstyled">
-<<<<<<< HEAD
 	<%= content_tag_for(:li, resource, :class => "row") do %>
 	<article class="col-xs-12 article-inverse">
 		<%= render_slideshow_for(resource) %>
-=======
-	<%= content_tag_for(:li, resource, :class => "row-fluid") do %>
-	<article class="span12 article-inverse">
-		<%= render_slideshow_for(resource, :plugin => 'galleria') %>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
 		<div class='article-content'>
 			<%= render_page_title(resource.title) %>
 			<hr>
@@ -35,24 +20,9 @@
 	end
 %>
 <% sections.each do |page| %>
-<<<<<<< HEAD
 	<%= content_tag_for(:li, page, :class => "row") do -%>
 		<article class="col-xs-12 page-content"> 
 		<%= render_slideshow_for(page) %>
-=======
-	<%= content_tag_for(:li, page, :class => "row-fluid") do -%>
-		<article class="span12 page-content"> 
-		<%= render_slideshow_for(page, :plugin => 'galleria') %>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
 		<div class='article-content'>
 			<b class='snap'></b>
 			<%= render_page_title(page.title) %>
