@@ -1,6 +1,30 @@
+<<<<<<< HEAD
+<%# resource_cache(resource) do %>
+<div class='container'>
+  <div class='row'>
+    <div class="col-xs-12">
+      <article>
+    	  <%= render_slideshow_for(resource) %>
+    	  <%= render_html_text(resource.body) %>
+      </article>
+    </div>
+  </div>
+</div>
+
+<%# end %>
+=======
 <% resource_cache(resource) do %>
   <article>
-	<%= render_slideshow_for(resource, :plugin => 'slideshow') %>
+	<%= render_slideshow_for(resource, :plugin => 'galleria') %>
 	<%= render_html_text(resource.body) %>
   </article>
+<<<<<<< HEAD
+<<<<<<< HEAD
 <% end %>
+>>>>>>> FETCH_HEAD
+=======
+<% end %>
+>>>>>>> FETCH_HEAD
+=======
+<% end %>
+>>>>>>> FETCH_HEAD

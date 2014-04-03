@@ -1,20 +1,20 @@
-<!doctype html>
-<%= render 'html_tag' %>
+<!DOCTYPE html>
+<html class="no-js">
 <%= render 'head' %>
 <body id='<%= @body_id %>'>
-<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-<div id="wrapper-wide-body">
-  <%= render 'header' %>
-  <div id='main-container' class='container-fluid'>
-	<div id="main-row" class='row-fluid'>
-		<div id="main" class='span12 <%= @body_id %> '>
-			<%= render "flash" %>
-			<%= yield %>
-		</div>
-	</div>
+  <%= render 'navbar' %>
+  <%= render 'sidebar' %>
+  <div id='page-wrapper'>
+    <div class="container">
+      <div id="main-row" class='row'>
+        <div id="main" class='col-xs-12 <%= @body_id %> '>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </div>
-  <%= render 'copyright' %>
-</div>
-<%= render 'javascripts' %>
+  <script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js' ></script>
+  <script src='//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js'></script>
+  <%= render 'javascripts' %>
 </body>
 </html>

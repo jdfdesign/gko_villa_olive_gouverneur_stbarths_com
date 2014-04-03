@@ -1,0 +1,27 @@
+form {
+	@include center-block();
+	text-align: center;
+}
+label {
+	font-family: $font-family-serif;
+	font-style: italic;
+}
+
+.footer-nav {
+	position: absolute;
+	top: $baseLineHeight / 4;
+	left: $baseLineHeight / 4;
+	text-align: center;
+}
+.contact-icons {
+	ul {
+		margin: 0px;
+		padding: 0px;
+		list-style: none;
+		li {
+			height: 14px;
+			padding: 0px 3px;
+			float: left;
+		}
+	}
+}

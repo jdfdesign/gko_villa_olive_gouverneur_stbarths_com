@@ -1,0 +1,12 @@
+<% if resource.images.any? %>
+<div class='page-images'>
+  <%= render_slideshow_for(resource, :plugin => 'galleria') %>
+  <h3 class='slideshow-title'><%= resource.title %></h3>
+</div>
+<% end %>
+<div class='article-content'>
+  <b class='snap'></b>
+  <%= render_page_title(resource.title) %>
+  <hr>
+  <%= render_html_text(resource.body) %>
+</div>

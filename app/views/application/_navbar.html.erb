@@ -1,0 +1,16 @@
+<%# cache([site, I18n.locale, 'header']) do %>
+<!-- Header
+================================================== -->
+<div class="navbar navbar-fixed-top navbar-default hide-on-print" role="navigation">
+    <div class="navbar-header">
+      <button id="sidebar-toggler" class="navbar-toggle" type="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- Be sure to leave the brand out there if you want it shown -->
+      <%= link_to site.title, root_url, :class => "navbar-brand" %>
+    </div>
+</div>
+<%# end %>

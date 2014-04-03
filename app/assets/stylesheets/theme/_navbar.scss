@@ -1,0 +1,114 @@
+/*-----------------------------------------
+ HEADER
+----------------------------------------- */
+.sidebar {
+  position: fixed;
+  z-index: $zindex-navbar - 1;
+  left: -$th-sidebar-width;
+  top: 0;
+  bottom: 0;
+  width: $th-sidebar-width;
+  margin: 0;
+  background-color: $navbar-default-bg;
+  @include transition(left .4s ease);
+  .caret {
+    display: none;
+  }
+  ul.nav {
+    @include center-block();
+    left: auto;
+    float: none;
+  }
+  ul.nav {
+    > li {
+      float: none;
+      > a {
+         text-transform: uppercase;
+         text-align: center;
+         font-size: $font-size-base - 2;
+         letter-spacing: 2px;
+         text-shadow: none;
+         padding: 3px 15px;
+         color: $navbar-default-link-color;
+         background-color: transparent;
+         &:hover {
+           color: $theme-color;
+           background-color: transparent;
+           text-decoration: none;
+         }
+       }
+    }
+  }
+  hr {
+    border-color: #888888;
+  }
+  
+  @media (min-width: $grid-float-breakpoint) {
+    position: absolute;
+    left: 0;
+  }
+}
+.sidebar-brand {
+  display: none;
+  margin: 40px;
+  padding: 0;
+  text-align: center;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  line-height: 32px;
+  font-weight: 300;
+  font-size: 28px;
+  color: $navbar-default-brand-color;
+  &:hover {
+    color: $navbar-default-brand-hover-color;
+    text-decoration: none;
+  }
+  @media (min-width: $grid-float-breakpoint) {
+    display: block;
+  }
+} 
+#locales-menu {
+	padding-top: $navbar-height*1.5;
+  padding-bottom: $navbar-height*.5;
+  .nav li > a {
+  	font-size: $font-size-base - 2;
+  }
+  @media (min-width: $grid-float-breakpoint) {
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+}
+
+.navbar {
+  @media (min-width: $grid-float-breakpoint) {
+    display: none;
+  }
+}
+.navbar-toggle {
+  float: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: (($navbar-height * 0.7) - $navbar-height) / 2;
+  padding-right: (($navbar-height * 0.7) - $navbar-height) / 2;
+  border-radius: 0;
+  background-color: $navbar-default-toggle-hover-bg;
+  @include square($navbar-height);
+  
+  .icon-bar {
+    width: 100%;
+    height: 3px;
+    border-radius: 0;
+  }
+}
+.navbar-brand {
+  float: right;
+  margin: 0;
+  margin-right: 20px;
+  padding: 0;
+  text-align: right;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: $navbar-height;
+  font-weight: 300;
+  font-size: 22px;
+} 

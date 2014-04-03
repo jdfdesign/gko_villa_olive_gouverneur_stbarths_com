@@ -1,0 +1,13 @@
+<%# cache([site, I18n.locale, 'header']) do %>
+<!-- Header
+================================================== -->
+<div class="sidebar hide-on-print" role="navigation">
+  <div class="header-top" >
+    <%= render 'locales_select' %>
+  </div>
+  <%= link_to site.title, root_url, :class => "sidebar-brand" %>
+  <%= render 'menu', :sections => site.primary_menu, :menu_name => 'sidebar-nav' %>
+  <hr class="separator">
+  <%= render_menu('pipe') %>
+</div>
+<%# end %>

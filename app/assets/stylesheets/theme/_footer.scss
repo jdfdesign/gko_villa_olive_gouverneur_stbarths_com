@@ -1,0 +1,24 @@
+/*-----------------------------------------
+ FOOTER
+----------------------------------------- */
+#copyright-container {
+
+	.nav > li > a {
+		font-size: $font-size-base - 3;
+		text-shadow: none;
+	  // Vertically center the text given @navbarHeight
+	  $elementHeight: 20px;
+	  padding: (($copyrightHeight - $elementHeight) / 2 - 1) 10px (($copyrightHeight - $elementHeight) / 2 + 1);
+	  line-height: 19px;
+	  float: left;
+	}	
+}
+#site-by {
+	font-size: $font-size-base - 3;
+	text-decoration: underline;
+	float: right;
+	// Vertically center the text given @navbarHeight
+	$elementHeight: 20px;
+	padding: (($copyrightHeight - $elementHeight) / 2 - 1) 10px (($copyrightHeight - $elementHeight) / 2 + 1);
+	line-height: 19px;
+}

@@ -1,20 +1,65 @@
-// Variables.less
-// Variables to customize the look and feel of Bootstrap
-// -----------------------------------------------------
-$sidebarWidth: 220px;
-$maxImageWidth: 950px;
+/* THEME VARIABLES
+-------------------------------------------------- */
+$theme-color: #222222; 
+$th-sidebar-width: 240px;
 
+/* IMPORTS
+-------------------------------------------------- */ 
+@import "theme/variables"; 
+@import "bootstrap.3.0.2/bootstrap"; 
+@import "theme/navbar";
+//@import "theme/footer";
+//@import "theme/form"; 
+@import "theme/home"; 
 
-@import "variables";
-@import "twitter/bootstrap";
-@import "gko/public/base";
-@import "galleria";
+/* FIX FOR IE DEVICE_WIDTH BUG
+-------------------------------------------------- */
+@-webkit-viewport{width:device-width}
+@-moz-viewport{width:device-width}
+@-ms-viewport{width:device-width}
+@-o-viewport{width:device-width}
+@viewport{width:device-width}
 
+/* PATCHES
+-------------------------------------------------- */
 
+// Color for the placeholder plugin
+.placeholder {
+  color: $input-color-placeholder;
+}
+
+// Gmap patches
+#map-canvas {
+  height: 400px;
+  img {
+    max-width: none;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+  }
+}
+
+/* GLOBAL
+-------------------------------------------------- */
+// We do not want focus
+a:focus,
 .btn:focus,
-a:focus {
+button:focus {
   outline: 0;
 }
+::selection {
+	background-color: $brand-primary;
+	color: #ffffff;
+}
+a {
+  @include transition(all 0.3s ease-in-out);
+}
+ul.unstyled {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+h1 {margin-top: 0;}
 /*-----------------------------------------
  STRUCTURAL LAYOUT 
 ----------------------------------------- */
@@ -25,122 +70,41 @@ body {
    height:100%;
 }
 body {
-	display: none;
+  display: none;
 } 
-.container-fluid {
-	padding: 0;
-}
-#main-container {
-	
-	background-color: white;	
-}
-#site-subtitle {
-	display: none;
+#page-wrapper {
+ @include transition(padding .3s ease);
 }
 hr {
-	width: 28px;
-	@include center-block();
+  width: 28px;
+  @include center-block();
 }
-/*-----------------------------------------
- FORM
------------------------------------------ */
-form {
-	@include center-block();
-	text-align: center;
+body.sidebar-open {
+  #page-wrapper {
+    margin-left: $th-sidebar-width;
+  }
+  .sidebar {
+    position: absolute;
+    left: 0;
+  }
 }
-label {
-	font-family: $serifFontFamily;
-	font-style: italic;
-}
-/*-----------------------------------------
- HEADER
------------------------------------------ */
-.navbar {
-	.brand {
-		margin: 0;
-		padding: 0;
-		text-align: center;
-		width: 100%;
-		top: 10.35%;
-		letter-spacing: 4px;
-		text-align: center;
-		text-transform: uppercase;
-		line-height: 42px;
-		font-weight: 300;
-		font-size: 32px;
-		a {
-			padding: $baseLineHeight 0;
-			display: block;
-			margin: $baseLineHeight auto;
-		}
-		
-	} 
 
-	@include hidden-dropdown();
-	ul.nav {
-		@include center-block();
-		left: auto;
-		float: none;
-	}
-	ul.nav > li {
-		float: none;
-	}
-	ul.nav > li > a {
-		text-transform: uppercase;
-		text-align: center;
-		font-size: $baseFontSize;
-		letter-spacing: 2px;
-		text-shadow: none;
-		padding: 3px 15px;
-	}
-	hr {
-		display: none;
-	}
-	.btn-navbar {
-		@include button-background($grayLighter, $grayLighter);
-		text-transform: uppercase;
-		padding: $baseLineHeight 0;
-		font-size: $baseFontSize + 4;
-		border: none;
-		[class^="icon-"], [class*=" icon-"] {
-			background-image: url(/assets/twitter/bootstrap/glyphicons-halflings.png);
-			margin: 2px 0 0 2px;
-			@include opacity(40);
-		}	
-	}
+#page-wrapper {
+  height: 100%;
+  > .container {
+    background-color: white;
+    float: left;
+    margin: 0;
+    height: 100%;
+  }
 }
-#locales-menu ul.nav li > a {
-	font-size: $baseFontSize - 2;
-}
-	
-.footer-nav {
-	position: absolute;
-	top: $baseLineHeight / 4;
-	left: $baseLineHeight / 4;
-	text-align: center;
-}
-.contact-icons {
-	ul {
-		margin: 0px;
-		padding: 0px;
-		list-style: none;
-		li {
-			height: 14px;
-			padding: 0px 3px;
-			float: left;
-		}
-	}
-}
-/*-----------------------------------------
- FOOTER
------------------------------------------ */
+
 /*-----------------------------------------
  CONTENT
 ----------------------------------------- */
 .html-text {
-	padding: 10px 100px 40px;
-	text-align: center;
-	padding: $baseLineHeight 21px;
+  text-align: center;
+  padding: $line-height-computed 21px;
 }
 article {
 	.article-content {
@@ -156,209 +120,42 @@ article {
 		height: 0; 
 		border-left: 10px solid transparent;
 		border-right: 10px solid transparent;
-		border-bottom: 10px solid $white;
+		border-bottom: 10px solid #fff;
 	}
-
 }
+
 .article-inverse {
-	background: $grayDarker; 
+	background: $gray-darker; 
 	.html-text {
 		color: $gray;
-		font-size: 40px;
-		letter-spacing: 4px;
-		line-height: 50px;
-		padding: 100px;
+		font-size: 20px;
+		line-height: 26px;
+    letter-spacing: 1px;
+		padding: 0 60px;
 		text-align: center;
 		font-style: italic;
-		font-family: $serifFontFamily;
+		font-family: $font-family-serif;
 	}
 	hr {
-		color: $black;
+		color: #000;
 	}
+  @media (min-width: $grid-float-breakpoint) {
+    .html-text {
+  		font-size: 40px;
+  		line-height: 50px;
+      letter-spacing: 3px;
+      padding: 100px;
+    }
+  }
 }
 .page-title {
-	letter-spacing: 4px;
-	text-align: center;
-	text-transform: capitalize;
-	font-style: italic;
-	line-height: 90px;
-	font-weight: 300;
-	font-size: 64px;
-	font-family: $serifFontFamily;
-	padding: 60px 21px $baseLineHeight 21px;
-}
-
-/*-----------------------------------------
- FOOTER
------------------------------------------ */
-#copyright-container {
-
-	.nav > li > a {
-		font-size: $baseFontSize - 3;
-		text-shadow: none;
-	  // Vertically center the text given @navbarHeight
-	  $elementHeight: 20px;
-	  padding: (($copyrightHeight - $elementHeight) / 2 - 1) 10px (($copyrightHeight - $elementHeight) / 2 + 1);
-	  line-height: 19px;
-	  float: left;
-	}	
-}
-#site-by {
-	font-size: $baseFontSize - 3;
-	text-decoration: underline;
-	float: right;
-	// Vertically center the text given @navbarHeight
-	$elementHeight: 20px;
-	padding: (($copyrightHeight - $elementHeight) / 2 - 1) 10px (($copyrightHeight - $elementHeight) / 2 + 1);
-	line-height: 19px;
-}
-/*-----------------------------------------
- RESPONSIVE
------------------------------------------ */
-@import "twitter/bootstrap/responsive";
-@import "gko/default_responsive";
-@media (max-width: 979px) {
-	body {
-		padding: 0;
-	}
-	/*-- HEADER
-	----------------------------------------- */
-	.navbar {
-		margin-bottom: 0;
-		
-		.btn-navbar {
-			color: $black;
-		}
-		.btn-navbar:hover, 
-		.btn-navbar:active, 
-		.btn-navbar.active, 
-		.btn-navbar.disabled, 
-		.btn-navbar[disabled] {
-			color: $grayDark;
-		}
-	}
-
-	.navbar-inner {
-		padding: 0;
-		@include gradient-vertical($white, $white);
-		@include border-radius(none);
-		@include box-shadow(none);
-	}
-	.nav-collapse {
-		
-		.nav > li {
-			&.dropdown {
-				border-top: 1px dotted $navbarLinkColor;
-			}
-			&:first-child {
-				border-top: none;
-			};
-		}
-		.nav > li > a, 
-		.dropdown-menu a {
-			text-align: center;
-			font-weight: normal;
-		}
-		 .dropdown-menu {
-			padding-bottom: 8px;
-			a {
-				color: $navbarLinkColor;
-				font-family: $serifFontFamily;
-				font-style: italic;
-				@include border-radius(none);
-				padding: 2px 0;
-				&:hover {
-					color: $navbarLinkColorHover;
-				};
-			}
-		}
-	}
-
-	.navbar ul.nav > li > a {
-		padding-top: 8px;
-	}
-	
-	#locales-menu {
-		position: absolute;
-		top: $baseLineHeight / 4;
-		right: $baseLineHeight / 4;
-	}
-}
-@media (min-width: 980px) {
-	.galleria-container {
-		//max-height: 600px;
-	}
-	/*-- LAYOUT
-	----------------------------------------- */
-	#wrapper-wide-body {
-		min-width: 980px - $sidebarWidth;
-		max-width: $maxImageWidth;
-		min-height: 100%;
-		float: left;
-		background-color: $white;
-		padding-left: $sidebarWidth;
-		position: relative;
-	}
-	#main-container {
-		position:relative;
-		padding-bottom:$copyrightHeight;   /* Height of the footer */
-	}
-
-	#copyright-container {
-		min-width: 980px - $sidebarWidth;
-		max-width: $maxImageWidth;
-		position: absolute;
-		bottom: 0;
-		background-color: $white;
-	}
-	/*-- HEADER
-	----------------------------------------- */
-
-	.navbar {
-		position: fixed;
-		top: 0;
-		left: 0;
-		min-height: 100%;
-		z-index: 10;
-		min-width: $sidebarWidth;
-		width: $sidebarWidth;
-		background-color: $navbarBackground;
-		.brand {
-			float: none;
-			clear: both;
-			@include center-block();
-			position: absolute;
-			width: $sidebarWidth - 40;
-		}	
-		.nav-menu {
-			margin: $baseLineHeight/4 0;
-			padding: $baseLineHeight/4 0;
-		}
-		.nav-collapse {
-			position: absolute;
-			top: 30.19%;
-			width: $sidebarWidth - 40;
-			@include center-block();
-		}
-		hr {
-			display: block;
-			color: $grayLight;
-		}
-		
-	}
-	#locales-menu {
-		float: none;
-		text-align: center;
-	}
-	#locales-menu ul.nav {
-		@include center-nav();
-	}
-
-	.footer-nav {
-		top: auto;
-		bottom: 35px;
-		@include center-nav();
-		text-align: center;
-	}
-
+  letter-spacing: 4px;
+  text-align: center;
+  text-transform: capitalize;
+  font-style: italic;
+  line-height: 90px;
+  font-weight: 300;
+  font-size: 64px;
+  font-family: $font-family-serif;
+  padding: 60px 21px $line-height-computed 21px;
 }
