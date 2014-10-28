@@ -1,7 +1,7 @@
 <%# resource_cache(resource) do %>
 <div class='container'>
   <div class='row'>
-    <div class="col-xs-12">
+    <div class="col-xs-12 no-pad">
       <article>
     	  <%= render_slideshow_for(resource, :plugin => 'carousel') %>
     	  <%= render_html_text(resource.body) %>
@@ -9,5 +9,4 @@
     </div>
   </div>
 </div>
-
 <%# end %>

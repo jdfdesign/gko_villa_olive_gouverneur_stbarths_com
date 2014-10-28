@@ -8,9 +8,6 @@ $th-sidebar-width: 240px;
 @import "theme/variables"; 
 @import "bootstrap.3.0.2/bootstrap"; 
 @import "theme/navbar";
-//@import "theme/footer";
-//@import "theme/form"; 
-@import "theme/home"; 
 
 /* FIX FOR IE DEVICE_WIDTH BUG
 -------------------------------------------------- */
@@ -72,8 +69,18 @@ body {
 body {
   display: none;
 } 
+#body-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  max-width: 1430px;
+  height: 100%;
+}
 #page-wrapper {
- @include transition(padding .3s ease);
+  @include transition(padding .3s ease);
+  > .container {
+    width:100% !important;
+  }
 }
 hr {
   width: 28px;
@@ -93,9 +100,9 @@ body.sidebar-open {
   height: 100%;
   > .container {
     background-color: white;
-    float: left;
+    //float: left;
     margin: 0;
-    height: 100%;
+    min-height: 100%;
   }
 }
 
@@ -129,7 +136,13 @@ body.sidebar-open {
   }
 
 }
+
+.col-xs-12.no-pad {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
 article {
+  
 	.article-content {
 		position: relative;
 	}
@@ -149,6 +162,7 @@ article {
 
 .article-inverse {
 	background: $gray-darker; 
+  
 	.html-text {
 		color: $gray;
 		font-size: 20px;

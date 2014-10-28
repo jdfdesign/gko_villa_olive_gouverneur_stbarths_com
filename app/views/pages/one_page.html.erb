@@ -1,7 +1,7 @@
 <%# resource_cache(resource) do %> 
 <ul class="unstyled">
 	<%= content_tag_for(:li, resource, :class => "row") do %>
-	<article class="col-xs-12 article-inverse">
+	<article class="col-xs-12 article-inverse no-pad">
 		<%= render_slideshow_for(resource, :plugin => 'carousel') %>
 		<div class='article-content'>
 			<%= render_page_title(resource.title) %>
@@ -21,7 +21,7 @@
 %>
 <% sections.each do |page| %>
 	<%= content_tag_for(:li, page, :class => "row") do -%>
-		<article class="col-xs-12 page-content"> 
+		<article class="col-xs-12 page-content no-pad"> 
 		<%= render_slideshow_for(page, :plugin => 'carousel') %>
 		<div class='article-content'>
 			<b class='snap'></b>

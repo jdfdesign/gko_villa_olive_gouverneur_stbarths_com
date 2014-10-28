@@ -395,12 +395,12 @@ textarea {
 
 /* line 43, ../../app/assets/stylesheets/bootstrap.3.0.2/_scaffolding.scss */
 a {
-  color: #428bca;
+  color: #222222;
   text-decoration: none;
 }
 /* line 48, ../../app/assets/stylesheets/bootstrap.3.0.2/_scaffolding.scss */
 a:hover, a:focus {
-  color: #2a6496;
+  color: black;
   text-decoration: underline;
 }
 /* line 53, ../../app/assets/stylesheets/bootstrap.3.0.2/_scaffolding.scss */
@@ -503,11 +503,11 @@ cite {
 
 /* line 38, ../../app/assets/stylesheets/bootstrap.3.0.2/_type.scss */
 .text-primary {
-  color: #428bca;
+  color: #222222;
 }
 /* line 40, ../../app/assets/stylesheets/bootstrap.3.0.2/_type.scss */
 .text-primary:hover {
-  color: #3071a9;
+  color: #090909;
 }
 
 /* line 44, ../../app/assets/stylesheets/bootstrap.3.0.2/_type.scss */
@@ -2722,8 +2722,8 @@ fieldset[disabled] .btn-default.active {
 /* line 462, ../../app/assets/stylesheets/bootstrap.3.0.2/_mixins.scss */
 .btn-primary {
   color: white;
-  background-color: #428bca;
-  border-color: #357ebd;
+  background-color: #222222;
+  border-color: #161616;
 }
 
 /* line 472, ../../app/assets/stylesheets/bootstrap.3.0.2/_mixins.scss */
@@ -2733,8 +2733,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: white;
-  background-color: #3276b1;
-  border-color: #285e8e;
+  background-color: #0e0e0e;
+  border-color: black;
 }
 
 /* line 479, ../../app/assets/stylesheets/bootstrap.3.0.2/_mixins.scss */
@@ -2756,8 +2756,8 @@ fieldset[disabled] .btn-primary:hover,
 fieldset[disabled] .btn-primary:focus,
 fieldset[disabled] .btn-primary:active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #428bca;
-  border-color: #357ebd;
+  background-color: #222222;
+  border-color: #161616;
 }
 
 /* line 462, ../../app/assets/stylesheets/bootstrap.3.0.2/_mixins.scss */
@@ -2926,7 +2926,7 @@ fieldset[disabled] .btn-info.active {
 
 /* line 76, ../../app/assets/stylesheets/bootstrap.3.0.2/_buttons.scss */
 .btn-link {
-  color: #428bca;
+  color: #222222;
   font-weight: normal;
   cursor: pointer;
   border-radius: 0;
@@ -2943,7 +2943,7 @@ fieldset[disabled] .btn-info.active {
 }
 /* line 96, ../../app/assets/stylesheets/bootstrap.3.0.2/_buttons.scss */
 .btn-link:hover, .btn-link:focus {
-  color: #2a6496;
+  color: black;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -3102,7 +3102,7 @@ input[type="button"].btn-block {
   color: white;
   text-decoration: none;
   outline: 0;
-  background-color: #428bca;
+  background-color: #222222;
 }
 
 /* line 100, ../../app/assets/stylesheets/bootstrap.3.0.2/_dropdowns.scss */
@@ -3630,12 +3630,12 @@ input[type="button"].btn-block {
 /* line 48, ../../app/assets/stylesheets/bootstrap.3.0.2/_navs.scss */
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #428bca;
+  border-color: #222222;
 }
 /* line 52, ../../app/assets/stylesheets/bootstrap.3.0.2/_navs.scss */
 .nav .open > a .caret, .nav .open > a:hover .caret, .nav .open > a:focus .caret {
-  border-top-color: #2a6496;
-  border-bottom-color: #2a6496;
+  border-top-color: black;
+  border-bottom-color: black;
 }
 /* line 64, ../../app/assets/stylesheets/bootstrap.3.0.2/_navs.scss */
 .nav .nav-divider {
@@ -3743,7 +3743,7 @@ input[type="button"].btn-block {
 /* line 195, ../../app/assets/stylesheets/bootstrap.3.0.2/_navs.scss */
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
   color: white;
-  background-color: #428bca;
+  background-color: #222222;
 }
 /* line 199, ../../app/assets/stylesheets/bootstrap.3.0.2/_navs.scss */
 .nav-pills > li.active > a .caret, .nav-pills > li.active > a:hover .caret, .nav-pills > li.active > a:focus .caret {
@@ -3802,14 +3802,14 @@ input[type="button"].btn-block {
 
 /* line 240, ../../app/assets/stylesheets/bootstrap.3.0.2/_navs.scss */
 .nav .caret {
-  border-top-color: #428bca;
-  border-bottom-color: #428bca;
+  border-top-color: #222222;
+  border-bottom-color: #222222;
 }
 
 /* line 244, ../../app/assets/stylesheets/bootstrap.3.0.2/_navs.scss */
 .nav a:hover .caret {
-  border-top-color: #2a6496;
-  border-bottom-color: #2a6496;
+  border-top-color: black;
+  border-bottom-color: black;
 }
 
 /* line 250, ../../app/assets/stylesheets/bootstrap.3.0.2/_navs.scss */
@@ -4443,8 +4443,8 @@ input[type="button"].btn-block {
 .pagination > .active > span:focus {
   z-index: 2;
   color: white;
-  background-color: #428bca;
-  border-color: #428bca;
+  background-color: #222222;
+  border-color: #222222;
   cursor: default;
 }
 /* line 65, ../../app/assets/stylesheets/bootstrap.3.0.2/_pagination.scss */
@@ -4590,11 +4590,11 @@ input[type="button"].btn-block {
 
 /* line 40, ../../app/assets/stylesheets/bootstrap.3.0.2/_labels.scss */
 .label-primary {
-  background-color: #428bca;
+  background-color: #222222;
 }
 /* line 535, ../../app/assets/stylesheets/bootstrap.3.0.2/_mixins.scss */
 .label-primary[href]:hover, .label-primary[href]:focus {
-  background-color: #3071a9;
+  background-color: #090909;
 }
 
 /* line 44, ../../app/assets/stylesheets/bootstrap.3.0.2/_labels.scss */
@@ -4669,7 +4669,7 @@ a.badge:hover, a.badge:focus {
 /* line 45, ../../app/assets/stylesheets/bootstrap.3.0.2/_badges.scss */
 a.list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #428bca;
+  color: #222222;
   background-color: white;
 }
 
@@ -4741,7 +4741,7 @@ a.list-group-item.active > .badge,
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #428bca;
+  border-color: #222222;
 }
 
 /* line 9, ../../app/assets/stylesheets/bootstrap.3.0.2/_alerts.scss */
@@ -4886,7 +4886,7 @@ a.thumbnail.active {
   line-height: 20px;
   color: white;
   text-align: center;
-  background-color: #428bca;
+  background-color: #222222;
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   -webkit-transition: width 0.6s ease;
@@ -5051,8 +5051,8 @@ a.list-group-item:hover, a.list-group-item:focus {
 a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.active:focus {
   z-index: 2;
   color: white;
-  background-color: #428bca;
-  border-color: #428bca;
+  background-color: #222222;
+  border-color: #222222;
 }
 /* line 69, ../../app/assets/stylesheets/bootstrap.3.0.2/_list-group.scss */
 a.list-group-item.active .list-group-item-heading, a.list-group-item.active:hover .list-group-item-heading, a.list-group-item.active:focus .list-group-item-heading {
@@ -5060,7 +5060,7 @@ a.list-group-item.active .list-group-item-heading, a.list-group-item.active:hove
 }
 /* line 72, ../../app/assets/stylesheets/bootstrap.3.0.2/_list-group.scss */
 a.list-group-item.active .list-group-item-text, a.list-group-item.active:hover .list-group-item-text, a.list-group-item.active:focus .list-group-item-text {
-  color: #e1edf7;
+  color: #888888;
 }
 
 /* line 79, ../../app/assets/stylesheets/bootstrap.3.0.2/_list-group.scss */
@@ -5282,17 +5282,17 @@ a.list-group-item:hover, a.list-group-item:focus {
 
 /* line 158, ../../app/assets/stylesheets/bootstrap.3.0.2/_panels.scss */
 .panel-primary {
-  border-color: #428bca;
+  border-color: #222222;
 }
 /* line 395, ../../app/assets/stylesheets/bootstrap.3.0.2/_mixins.scss */
 .panel-primary > .panel-heading {
   color: white;
-  background-color: #428bca;
-  border-color: #428bca;
+  background-color: #222222;
+  border-color: #222222;
 }
 /* line 400, ../../app/assets/stylesheets/bootstrap.3.0.2/_mixins.scss */
 .panel-primary > .panel-heading + .panel-collapse .panel-body {
-  border-top-color: #428bca;
+  border-top-color: #222222;
 }
 /* line 403, ../../app/assets/stylesheets/bootstrap.3.0.2/_mixins.scss */
 .panel-primary > .panel-heading > .dropdown .caret {
@@ -5300,7 +5300,7 @@ a.list-group-item:hover, a.list-group-item:focus {
 }
 /* line 408, ../../app/assets/stylesheets/bootstrap.3.0.2/_mixins.scss */
 .panel-primary > .panel-footer + .panel-collapse .panel-body {
-  border-bottom-color: #428bca;
+  border-bottom-color: #222222;
 }
 
 /* line 161, ../../app/assets/stylesheets/bootstrap.3.0.2/_panels.scss */
@@ -6834,16 +6834,16 @@ td.visible-print {
 
 /* PATCHES
 -------------------------------------------------- */
-/* line 28, ../../app/assets/stylesheets/public.css.scss */
+/* line 25, ../../app/assets/stylesheets/public.css.scss */
 .placeholder {
   color: #999999;
 }
 
-/* line 33, ../../app/assets/stylesheets/public.css.scss */
+/* line 30, ../../app/assets/stylesheets/public.css.scss */
 #map-canvas {
   height: 400px;
 }
-/* line 35, ../../app/assets/stylesheets/public.css.scss */
+/* line 32, ../../app/assets/stylesheets/public.css.scss */
 #map-canvas img {
   max-width: none;
   vertical-align: middle;
@@ -6853,33 +6853,33 @@ td.visible-print {
 
 /* GLOBAL
 -------------------------------------------------- */
-/* line 48, ../../app/assets/stylesheets/public.css.scss */
+/* line 45, ../../app/assets/stylesheets/public.css.scss */
 a:focus,
 .btn:focus,
 button:focus {
   outline: 0;
 }
 
-/* line 51, ../../app/assets/stylesheets/public.css.scss */
+/* line 48, ../../app/assets/stylesheets/public.css.scss */
 ::selection {
-  background-color: #428bca;
+  background-color: #222222;
   color: #ffffff;
 }
 
-/* line 55, ../../app/assets/stylesheets/public.css.scss */
+/* line 52, ../../app/assets/stylesheets/public.css.scss */
 a {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-/* line 58, ../../app/assets/stylesheets/public.css.scss */
+/* line 55, ../../app/assets/stylesheets/public.css.scss */
 ul.unstyled {
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
 }
 
-/* line 63, ../../app/assets/stylesheets/public.css.scss */
+/* line 60, ../../app/assets/stylesheets/public.css.scss */
 h1 {
   margin-top: 0;
 }
@@ -6887,7 +6887,7 @@ h1 {
 /*-----------------------------------------
  STRUCTURAL LAYOUT 
 ----------------------------------------- */
-/* line 68, ../../app/assets/stylesheets/public.css.scss */
+/* line 65, ../../app/assets/stylesheets/public.css.scss */
 html,
 body {
   margin: 0;
@@ -6895,18 +6895,31 @@ body {
   height: 100%;
 }
 
-/* line 73, ../../app/assets/stylesheets/public.css.scss */
+/* line 70, ../../app/assets/stylesheets/public.css.scss */
 body {
   display: none;
 }
 
-/* line 76, ../../app/assets/stylesheets/public.css.scss */
+/* line 73, ../../app/assets/stylesheets/public.css.scss */
+#body-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  max-width: 1430px;
+  height: 100%;
+}
+
+/* line 80, ../../app/assets/stylesheets/public.css.scss */
 #page-wrapper {
   -webkit-transition: padding 0.3s ease;
   transition: padding 0.3s ease;
 }
+/* line 82, ../../app/assets/stylesheets/public.css.scss */
+#page-wrapper > .container {
+  width: 100% !important;
+}
 
-/* line 79, ../../app/assets/stylesheets/public.css.scss */
+/* line 86, ../../app/assets/stylesheets/public.css.scss */
 hr {
   width: 28px;
   display: block;
@@ -6914,65 +6927,70 @@ hr {
   margin-right: auto;
 }
 
-/* line 84, ../../app/assets/stylesheets/public.css.scss */
+/* line 91, ../../app/assets/stylesheets/public.css.scss */
 body.sidebar-open #page-wrapper {
   margin-left: 240px;
 }
-/* line 87, ../../app/assets/stylesheets/public.css.scss */
+/* line 94, ../../app/assets/stylesheets/public.css.scss */
 body.sidebar-open .sidebar {
   position: absolute;
   left: 0;
 }
 
-/* line 93, ../../app/assets/stylesheets/public.css.scss */
+/* line 100, ../../app/assets/stylesheets/public.css.scss */
 #page-wrapper {
   height: 100%;
 }
-/* line 95, ../../app/assets/stylesheets/public.css.scss */
+/* line 102, ../../app/assets/stylesheets/public.css.scss */
 #page-wrapper > .container {
   background-color: white;
-  float: left;
   margin: 0;
-  height: 100%;
+  min-height: 100%;
 }
 
 /*-----------------------------------------
  CONTENT
 ----------------------------------------- */
-/* line 106, ../../app/assets/stylesheets/public.css.scss */
+/* line 113, ../../app/assets/stylesheets/public.css.scss */
 .html-text {
   text-align: center;
   padding: 20px 21px;
 }
-/* line 110, ../../app/assets/stylesheets/public.css.scss */
+/* line 117, ../../app/assets/stylesheets/public.css.scss */
 .html-text ul {
   padding-left: 0;
   list-style: none;
 }
-/* line 116, ../../app/assets/stylesheets/public.css.scss */
+/* line 123, ../../app/assets/stylesheets/public.css.scss */
 .html-text a {
   color: #333333;
   text-decoration: underline;
 }
-/* line 121, ../../app/assets/stylesheets/public.css.scss */
+/* line 128, ../../app/assets/stylesheets/public.css.scss */
 .html-text table {
   border-spacing: 20px;
   margin: 10px auto auto auto;
 }
-/* line 124, ../../app/assets/stylesheets/public.css.scss */
+/* line 131, ../../app/assets/stylesheets/public.css.scss */
 .html-text table tr {
   border: 1px solid gray;
 }
-/* line 127, ../../app/assets/stylesheets/public.css.scss */
+/* line 134, ../../app/assets/stylesheets/public.css.scss */
 .html-text table td {
   padding: 8px;
 }
 
-/* line 134, ../../app/assets/stylesheets/public.css.scss */
+/* line 141, ../../app/assets/stylesheets/public.css.scss */
+.col-xs-12.no-pad {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* line 147, ../../app/assets/stylesheets/public.css.scss */
 article .article-content {
   position: relative;
 }
-/* line 137, ../../app/assets/stylesheets/public.css.scss */
+/* line 150, ../../app/assets/stylesheets/public.css.scss */
 article .snap {
   z-index: 10;
   position: absolute;
@@ -6986,11 +7004,11 @@ article .snap {
   border-bottom: 10px solid #fff;
 }
 
-/* line 151, ../../app/assets/stylesheets/public.css.scss */
+/* line 164, ../../app/assets/stylesheets/public.css.scss */
 .article-inverse {
   background: #222222;
 }
-/* line 153, ../../app/assets/stylesheets/public.css.scss */
+/* line 167, ../../app/assets/stylesheets/public.css.scss */
 .article-inverse .html-text {
   color: #555555;
   font-size: 20px;
@@ -7001,12 +7019,12 @@ article .snap {
   font-style: italic;
   font-family: "ltc-bodoni-175", Georgia, "Times New Roman", Times, serif;
 }
-/* line 163, ../../app/assets/stylesheets/public.css.scss */
+/* line 177, ../../app/assets/stylesheets/public.css.scss */
 .article-inverse hr {
   color: #000;
 }
 @media (min-width: 768px) {
-  /* line 167, ../../app/assets/stylesheets/public.css.scss */
+  /* line 181, ../../app/assets/stylesheets/public.css.scss */
   .article-inverse .html-text {
     font-size: 40px;
     line-height: 50px;
@@ -7015,7 +7033,7 @@ article .snap {
   }
 }
 
-/* line 175, ../../app/assets/stylesheets/public.css.scss */
+/* line 189, ../../app/assets/stylesheets/public.css.scss */
 .page-title {
   letter-spacing: 4px;
   text-align: center;

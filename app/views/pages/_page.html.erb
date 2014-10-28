@@ -1,6 +1,6 @@
 <%# resource_cache(resource) do %> 
 	<%= content_tag_for(:li, resource, :class => "row") do %>
-		<div class="col-xs-12 page-content"> 
+		<div class="col-xs-12 page-content no-pad"> 
 			<% if resource.images.any? %>
 			<div class='page-images'>
 				<%= render_slideshow_for(resource) %>
