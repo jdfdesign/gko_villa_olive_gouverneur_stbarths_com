@@ -6,7 +6,23 @@
     <%= render 'locales_select' %>
   </div>
   <%= link_to site.title, root_url, :class => "sidebar-brand" %>
-  <%= render 'menu', :sections => site.primary_menu, :menu_name => 'sidebar-nav' %>
+  <nav id="primary-menu" class="primary-menu-container">
+    <ul class="nav nav-menu <%= menu_name if local_assigns.key?(:menu_name) %>">
+      <% site.primary_menu.each do |section| %>
+        <%
+          has_dropdown = section.children.in_menu.try(:any?)
+          li_classes = []
+          li_classes << "active" if !section.is_a?(Redirect) and active_paths.include?(section.public_url)
+          li_classes << "dropdown" if has_dropdown
+          li_classes << section.menu_css_class if section.menu_css_class.present?
+          li_classes = li_classes.join(" ")
+        %>
+        <li id="<%= dom_id(section) %>" class="<%= li_classes unless li_classes.blank? %>">
+          <%= menu_link(section) -%>
+        </li>
+      <% end %>
+    </ul>
+  </nav>
   <hr class="separator">
   <%= render_menu('pipe') %>
 </div>

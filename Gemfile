@@ -6,8 +6,9 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.2'
   gem 'uglifier', '~> 2.4.0'
 end
+
 group :production do
-  git "git@github.com:jdfdesign/gko_cms3.git", :tag => "v0.8.10.1" do
+  git "git@github.com:jdfdesign/gko_cms3.git", :tag => "v0.8.13.9" do
    gem 'gko_core'
    gem 'gko_auth'
    gem "gko_documents"

@@ -105,6 +105,29 @@ body.sidebar-open {
 .html-text {
   text-align: center;
   padding: $line-height-computed 21px;
+  
+  ul {
+    padding-left: 0;
+    list-style: none;
+    
+  }
+  
+  a {
+    color: $text-color;
+    text-decoration: underline;
+  }
+  
+  table {
+    border-spacing: 20px;
+    margin : 10px auto auto auto; 
+    tr {
+      border: 1px solid gray;
+    }
+    td {
+      padding: 8px;
+    }
+  }
+
 }
 article {
 	.article-content {

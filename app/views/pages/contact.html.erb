@@ -6,25 +6,30 @@
 <%
    privacy_text = t(:'.privacy_policy')
 %>
-<%= simple_form_for(:inquiry, :url => inquiries_path, :method => :post,
-                    :html => {:class => [:inquiry]}) do |form| %>
-    <%= hidden_field_tag(:return_to, request.url) %>
-    <%= form.hidden_field :site_id, :value => site.id %>
-    <%= form.error_notification %>
-    <%= form.input :name, :hint => '' %>
-    <%= form.input :email, :hint => false %>
-    <%= form.input :phone, :hint => false, :required => false %>
-    <%= form.input :message, :as => :text, :hint => false, :input_html => {:rows => 6} %>
-	<%= render 'anti_spam_field', :f => form %>
-    <% if privacy_text.present? -%>
-        <div class='control-group policy'>
-            <%= privacy_text.html_safe %>
-        </div>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= simple_form_for(:inquiry, :url => inquiries_path, :html => {:data => { :remote => true, :type => :json }, :method => :post, :class => [:inquiry]}) do |f| %>
+      <%= f.hidden_field :site_id, :value => site.id %>
+      <%= f.error_notification %>
+      <%= display_base_errors f.object %>
+      <div class="form-group">
+      <%= f.input :name, :hint => false, :input_html => { :class => 'form-control input-lg' } %>
+      </div>
+      <div class="form-group">
+      <%= f.input :email, :hint => false, :input_html => { :class => 'form-control input-lg' } %>
+      </div>
+      <div class="form-group">
+      <%= f.input :phone, :hint => false, :required => false, :input_html => { :class => 'form-control input-lg' } %>
+      </div>
+      <div class="form-group">
+      <%= f.input :message, :as => :text, :hint => false, :input_html => { :rows => 6, :class => 'form-control input-lg' } %>
+      </div>
+      <%= f.input :ghost, :label => false, :hint => false, :required => false, :wrapper_html => {:class => 'hide'} %>
+      <div class="form-group">
+        <%= f.button :submit, t("send_inquiry"), :class => 'btn btn-block btn-primary', :disable_with => "Submitting..." %>
+      </div>
     <% end %>
-    <div class='controls'>
-      <%= form.button :submit, t("send_inquiry") %>
-    </div>
-	
-<% end %>
+  </div>
+</div>
 </article>
 <%# end %>

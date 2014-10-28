@@ -6944,12 +6944,35 @@ body.sidebar-open .sidebar {
   text-align: center;
   padding: 20px 21px;
 }
+/* line 110, ../../app/assets/stylesheets/public.css.scss */
+.html-text ul {
+  padding-left: 0;
+  list-style: none;
+}
+/* line 116, ../../app/assets/stylesheets/public.css.scss */
+.html-text a {
+  color: #333333;
+  text-decoration: underline;
+}
+/* line 121, ../../app/assets/stylesheets/public.css.scss */
+.html-text table {
+  border-spacing: 20px;
+  margin: 10px auto auto auto;
+}
+/* line 124, ../../app/assets/stylesheets/public.css.scss */
+.html-text table tr {
+  border: 1px solid gray;
+}
+/* line 127, ../../app/assets/stylesheets/public.css.scss */
+.html-text table td {
+  padding: 8px;
+}
 
-/* line 111, ../../app/assets/stylesheets/public.css.scss */
+/* line 134, ../../app/assets/stylesheets/public.css.scss */
 article .article-content {
   position: relative;
 }
-/* line 114, ../../app/assets/stylesheets/public.css.scss */
+/* line 137, ../../app/assets/stylesheets/public.css.scss */
 article .snap {
   z-index: 10;
   position: absolute;
@@ -6963,11 +6986,11 @@ article .snap {
   border-bottom: 10px solid #fff;
 }
 
-/* line 128, ../../app/assets/stylesheets/public.css.scss */
+/* line 151, ../../app/assets/stylesheets/public.css.scss */
 .article-inverse {
   background: #222222;
 }
-/* line 130, ../../app/assets/stylesheets/public.css.scss */
+/* line 153, ../../app/assets/stylesheets/public.css.scss */
 .article-inverse .html-text {
   color: #555555;
   font-size: 20px;
@@ -6978,12 +7001,12 @@ article .snap {
   font-style: italic;
   font-family: "ltc-bodoni-175", Georgia, "Times New Roman", Times, serif;
 }
-/* line 140, ../../app/assets/stylesheets/public.css.scss */
+/* line 163, ../../app/assets/stylesheets/public.css.scss */
 .article-inverse hr {
   color: #000;
 }
 @media (min-width: 768px) {
-  /* line 144, ../../app/assets/stylesheets/public.css.scss */
+  /* line 167, ../../app/assets/stylesheets/public.css.scss */
   .article-inverse .html-text {
     font-size: 40px;
     line-height: 50px;
@@ -6992,7 +7015,7 @@ article .snap {
   }
 }
 
-/* line 152, ../../app/assets/stylesheets/public.css.scss */
+/* line 175, ../../app/assets/stylesheets/public.css.scss */
 .page-title {
   letter-spacing: 4px;
   text-align: center;
